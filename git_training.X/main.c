@@ -47,6 +47,8 @@
   Section: Included Files
 */
 #include <xc.h>
+#include <stdint.h>
+#include <stdbool.h>
 
 /*
                          Main application
