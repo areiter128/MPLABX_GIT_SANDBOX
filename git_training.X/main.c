@@ -54,7 +54,7 @@
 int main(void)
 {
     
-    // THis is Andy's change
+    // This is Andy's change
     
     while (1)
     {
