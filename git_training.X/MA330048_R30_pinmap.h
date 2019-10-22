@@ -63,6 +63,17 @@
 #include <stdint.h> // Include standard integer types                       
 #include <stdbool.h> // Include standard boolean types                      
 
+/* @@PNMAP_VERSION
+ * ***********************************************************************************************
+ * Description:
+ * This flag is a user defined flag helping to provide version information about the
+ * pinmap file. This string can be used universally across the firmware to identify the
+ * hardware version this firmware was written for.
+ *
+ * Please Note:
+ * His label is not connected to the generic macro specified in the compiler settings
+ * and need to maintained by the designer independently.
+ * ***********************************************************************************************/
 
 #define PINMAP_VERSION  "R30"
 
