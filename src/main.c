@@ -11,13 +11,13 @@
     This is the generated main.c using PIC24 / dsPIC33 / PIC32MM MCUs.
 
   @Description
-    This source file provides main entry point for system intialization and application code development.
+    This source file provides main entry point for system initialization and application code development.
     Generation Information :
         Product Revision  :  PIC24 / dsPIC33 / PIC32MM MCUs - 1.95-b-SNAPSHOT
         Device            :  dsPIC33CK256MP506
     The generated drivers are tested against the following:
-        Compiler          :  XC16 v1.36
-        MPLAB 	          :  MPLAB X v5.10
+        Compiler          :  XC16 v1.41
+        MPLAB 	          :  MPLAB X v5.30
 */
 
 /*
@@ -50,18 +50,41 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#include "globals.h"
+
+
+#define DBGLED_PERIOD   2999
+volatile uint16_t dbgled_cnt=0;
+
 /*
                          Main application
  */
 int main(void)
 {
+    volatile uint16_t timeout = 0;
     
-    // This is Andy's change
+    
+    ConfigureOscillator();      // Configure main oscillator
+    ConfigureAuxOscillator();   // Configure auxiliary oscillator
+    ConfigureSystemTimer();     // Initialize system timer
+    
+    DBGLED_INIT_OUTPUT;         // Call GPIO initialization macro
     
     while (1)
     {
+        while ((!_T1IF) && (timeout++ < 5000)); // wait until system timer has expired
+        _T1IF = 0;                              // Reset Timer1 interrupt flag
+        timeout = 0;                            // Reset timeout counter
+        
+        if(dbgled_cnt++ > DBGLED_PERIOD)
+        {
+            DBGLED_TOGGLE;
+            dbgled_cnt = 0;
+        }
+        
     }
-    return 1; 
+    
+    return(0); 
 }
 /**
  End of File
