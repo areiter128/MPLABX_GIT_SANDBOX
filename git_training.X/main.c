@@ -58,10 +58,11 @@ int main(void)
     
     // This is Andy's change
     
-    while (1)
+    while (1)   // Main wile() loop
     {
     }
-    return 1; 
+    
+    return (1); 
 }
 /**
  End of File
