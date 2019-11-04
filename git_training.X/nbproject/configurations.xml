@@ -4,8 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="f1" displayName="driver" projectFiles="true">
+      <logicalFolder name="f1" displayName="app" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="driver" projectFiles="true">
         <itemPath>inc/driver/drv_mcu.h</itemPath>
+        <itemPath>inc/driver/drv_led.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="misc" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="os" projectFiles="true">
       </logicalFolder>
       <itemPath>DM330029_R20_pinmap.h</itemPath>
       <itemPath>MA330048_R30_pinmap.h</itemPath>
@@ -17,11 +24,18 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f5" displayName="app" projectFiles="true">
+      </logicalFolder>
       <logicalFolder name="f1" displayName="driver" projectFiles="true">
         <itemPath>src/driver/drv_mcu.c</itemPath>
+        <itemPath>src/driver/drv_led.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="main" projectFiles="true">
         <itemPath>src/main/main.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="misc" projectFiles="true">
+      </logicalFolder>
+      <logicalFolder name="f4" displayName="os" projectFiles="true">
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -48,7 +62,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.2.66"/>
+        <pack name="dsPIC33CK-MP_DFP" vendor="Microchip" version="1.1.51"/>
       </packs>
       <compileType>
         <linkerTool>
