@@ -4,6 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f1" displayName="driver" projectFiles="true">
+        <itemPath>inc/driver/drv_mcu.h</itemPath>
+      </logicalFolder>
       <itemPath>DM330029_R20_pinmap.h</itemPath>
       <itemPath>MA330048_R30_pinmap.h</itemPath>
     </logicalFolder>
@@ -14,7 +17,12 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
+      <logicalFolder name="f1" displayName="driver" projectFiles="true">
+        <itemPath>src/driver/drv_mcu.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f2" displayName="main" projectFiles="true">
+        <itemPath>src/main/main.c</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -24,6 +32,7 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>.</Elem>
+    <Elem>../../../00_Bitbucket/MPA13_CK/mpa13_ck.X/src/driver</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -80,7 +89,7 @@
         <property key="enable-short-double" value="false"/>
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories" value="inc"/>
         <property key="isolate-each-function" value="false"/>
         <property key="keep-inline" value="false"/>
         <property key="oXC16gcc-align-arr" value="false"/>
