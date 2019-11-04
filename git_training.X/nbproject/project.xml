@@ -14,6 +14,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../../../00_Bitbucket/MPA13_CK/mpa13_ck.X/src/driver</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

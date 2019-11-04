@@ -49,13 +49,14 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
+#include "driver/drv_mcu.h"
 
 /*
                          Main application
  */
 int main(void)
 {
-    
+    Drv_MCU_InitClock();
     // This is Andy's change
     
     while (1)   // Main wile() loop
