@@ -10,9 +10,15 @@
         <itemPath>inc/driver/drv_mcu.h</itemPath>
         <itemPath>inc/driver/drv_led.h</itemPath>
       </logicalFolder>
+      <logicalFolder name="f5" displayName="main" projectFiles="true">
+        <itemPath>inc/main/project_settings.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f3" displayName="misc" projectFiles="true">
       </logicalFolder>
       <logicalFolder name="f4" displayName="os" projectFiles="true">
+        <itemPath>inc/os/os_scheduler.h</itemPath>
+        <itemPath>inc/os/os_sys_time.h</itemPath>
+        <itemPath>inc/os/os_timer.h</itemPath>
       </logicalFolder>
       <itemPath>DM330029_R20_pinmap.h</itemPath>
       <itemPath>MA330048_R30_pinmap.h</itemPath>
@@ -32,10 +38,15 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="main" projectFiles="true">
         <itemPath>src/main/main.c</itemPath>
+        <itemPath>src/main/main_tasks.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="misc" projectFiles="true">
       </logicalFolder>
       <logicalFolder name="f4" displayName="os" projectFiles="true">
+        <itemPath>src/os/os_scheduler_100us.c</itemPath>
+        <itemPath>src/os/os_scheduler_1ms.c</itemPath>
+        <itemPath>src/os/os_sys_time.c</itemPath>
+        <itemPath>src/os/os_timer.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"

@@ -51,6 +51,7 @@
 #include <stdbool.h>
 #include "driver/drv_mcu.h"
 #include "driver/drv_led.h"
+#include "os/os_scheduler.h"
 
 // 16-bit peripheral library for access to delay_ms() function  ==> FCY need to be defined (drv_mcu.h)
 #include <libpic30.h>
@@ -63,6 +64,11 @@ int main(void)
     Drv_MCU_InitClock();
     Drv_LED_Init();
     
+    OS_Scheduler_Init();
+
+    OS_Scheduler_RunForever();
+    
+/*    
     // This is Andy's change
     
     while (1)   // Main wile() loop
@@ -70,7 +76,7 @@ int main(void)
         __delay_ms(1000);
         Drv_LED_Toggle(LED_RED);
     }
-    
+*/    
     return (1); 
 }
 /**
